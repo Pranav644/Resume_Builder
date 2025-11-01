@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="image">Profile Image:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" required></textarea>
+
+            <h3>Experience</h3>
+            <div id="experienceContainer">
+                <div class="experience">
+                    <input type="text" placeholder="Job Title" class="jobTitle" required>
+                    <input type="text" placeholder="Company" class="company" required>
+                    <textarea placeholder="Job Description" class="jobDescription" required></textarea>
+                    <button type="button" class="removeExperience">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addExperience">Add Experience</button>
+
+            <h3>Education</h3>
+            <div id="educationContainer">
+                <div class="education">
+                    <input type="text" placeholder="Degree" class="degree" required>
+                    <input type="text" placeholder="Institution" class="institution" required>
+                    <textarea placeholder="Description" class="educationDescription" required></textarea>
+                    <button type="button" class="removeEducation">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addEducation">Add Education</button>
+
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" required>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+        <div id="resumeOutput" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
